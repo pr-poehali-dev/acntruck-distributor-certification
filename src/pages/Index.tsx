@@ -124,7 +124,7 @@ const Index = () => {
                   <div className="flex flex-col items-center">
                     <div className="w-48 h-48 flex items-center justify-center mb-4">
                       <img 
-                        src="https://cdn.poehali.dev/files/70296751-86bd-4e62-94e2-5331886bdb8a.png" 
+                        src="https://cdn.poehali.dev/files/811a4b75-439a-4352-903e-eb66e553653e.png" 
                         alt="Official Seal" 
                         className="w-44 h-44 object-contain"
                       />
