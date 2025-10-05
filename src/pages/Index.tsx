@@ -15,27 +15,70 @@ const Index = () => {
   const [companyName2, setCompanyName2] = useState('安川机械（上海）有限公司');
   const [date2, setDate2] = useState('2022年10月19日');
 
+  const Seal = () => (
+    <svg width="120" height="120" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="95" fill="none" stroke="#C82333" strokeWidth="4"/>
+      <circle cx="100" cy="100" r="85" fill="none" stroke="#C82333" strokeWidth="2"/>
+      <text 
+        x="100" 
+        y="60" 
+        textAnchor="middle" 
+        fill="#C82333" 
+        fontSize="18" 
+        fontWeight="bold"
+        fontFamily="Arial, sans-serif"
+      >
+        Acntruck Vehicle &
+      </text>
+      <text 
+        x="100" 
+        y="80" 
+        textAnchor="middle" 
+        fill="#C82333" 
+        fontSize="18" 
+        fontWeight="bold"
+        fontFamily="Arial, sans-serif"
+      >
+        Machinery Co., Ltd
+      </text>
+      <text 
+        x="100" 
+        y="110" 
+        textAnchor="middle" 
+        fill="#C82333" 
+        fontSize="24" 
+        fontWeight="bold"
+        fontFamily="Arial, sans-serif"
+      >
+        上海安出
+      </text>
+      <text 
+        x="100" 
+        y="135" 
+        textAnchor="middle" 
+        fill="#C82333" 
+        fontSize="24" 
+        fontWeight="bold"
+        fontFamily="Arial, sans-serif"
+      >
+        机械有限
+      </text>
+      <polygon points="100,150 110,165 95,160 105,160 90,165" fill="#C82333"/>
+    </svg>
+  );
+
   const downloadCertificate = async () => {
     if (certificateRef.current) {
       try {
         const dataUrl = await toPng(certificateRef.current, {
           quality: 1,
           pixelRatio: 3,
-          backgroundColor: '#ffffff',
-          skipFonts: true,
         });
-        
-        const response = await fetch(dataUrl);
-        const blob = await response.blob();
-        const jpegBlob = new Blob([blob], { type: 'image/jpeg' });
-        const url = URL.createObjectURL(jpegBlob);
         
         const link = document.createElement('a');
         link.download = 'certificate.jpeg';
-        link.href = url;
+        link.href = dataUrl;
         link.click();
-        
-        URL.revokeObjectURL(url);
       } catch (error) {
         console.error('Failed to generate certificate:', error);
         alert('Error downloading certificate. Please try again.');
@@ -215,12 +258,7 @@ const Index = () => {
                         </div>
                       )}
                       
-                      <img 
-                        src="https://cdn.poehali.dev/files/7321543c-55e5-4ca1-be2c-dcc77fa47b51.png" 
-                        alt="Seal" 
-                        className="w-32 h-32 object-contain"
-                        crossOrigin="anonymous"
-                      />
+                      <Seal />
                     </div>
 
                     <h3 className="text-5xl font-bold mb-6" style={{ color: '#000' }}>
@@ -249,12 +287,7 @@ const Index = () => {
                         )}
                       </div>
                       
-                      <img 
-                        src="https://cdn.poehali.dev/files/7321543c-55e5-4ca1-be2c-dcc77fa47b51.png" 
-                        alt="Seal" 
-                        className="w-32 h-32 object-contain"
-                        crossOrigin="anonymous"
-                      />
+                      <Seal />
                     </div>
                   </div>
                 </div>
