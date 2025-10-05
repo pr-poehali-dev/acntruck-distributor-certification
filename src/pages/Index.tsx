@@ -94,8 +94,8 @@ const Index = () => {
 
               <div className="relative z-10 h-full flex flex-col justify-between p-24 pt-32">
                 <div className="text-center">
-                  <p className="text-lg text-slate-700 mb-6">
-                    Acntruck Vehicle & Machinery (Shanghai) Co., Ltd
+                  <p className="text-lg mb-6" style={{ color: '#d4a5a5' }}>
+                    acntruck vehicle & machinery (shanghai) co., ltd
                   </p>
                   
                   <h2 className="text-7xl font-bold mb-4 tracking-wide"
@@ -103,28 +103,27 @@ const Index = () => {
                   >
                     CERTIFICATE
                   </h2>
-                  <p className="text-3xl italic text-slate-600 mb-12">Official Representative</p>
+                  <p className="text-lg mb-12" style={{ color: '#d4a5a5' }}>official representative</p>
 
-                  <p className="text-xl text-slate-700 mb-8 leading-relaxed">
-                    This certificate confirms that the company
+                  <p className="text-lg mb-8 leading-relaxed" style={{ color: '#d4a5a5' }}>
+                    this certificate confirms that the company
                   </p>
 
                   <div className="mb-8">
                     <div className="inline-block border-b-2 border-slate-400 pb-2 px-12">
-                      <p className="text-4xl font-bold text-slate-800" 
-                        style={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic' }}
+                      <p className="text-lg" 
+                        style={{ fontFamily: 'Roboto, sans-serif', color: '#d4a5a5' }}
                       >
-                        TechGlobal LLC
+                        techglobal llc
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-xl text-slate-700 mb-4 max-w-4xl mx-auto leading-relaxed">
-                    has the status of an official representative of{' '}
-                    <span className="font-semibold">Acntruck Vehicle & Machinery (Shanghai) Co., Ltd</span>
+                  <p className="text-lg mb-4 max-w-4xl mx-auto leading-relaxed" style={{ color: '#d4a5a5' }}>
+                    has the status of an official representative of acntruck vehicle & machinery (shanghai) co., ltd
                   </p>
-                  <p className="text-lg text-slate-600">
-                    (Acntruck Vehicle & Machinery (Shanghai) Co., Ltd)
+                  <p className="text-lg" style={{ color: '#d4a5a5' }}>
+                    (acntruck vehicle & machinery (shanghai) co., ltd)
                   </p>
                 </div>
 
@@ -138,7 +137,7 @@ const Index = () => {
                       />
                     </div>
                     <div className="text-left">
-                      <p className="text-base text-slate-600 mb-1">Date 14.03.2022</p>
+                      <p className="text-lg mb-1" style={{ color: '#d4a5a5' }}>date 14.03.2022</p>
                     </div>
                   </div>
 
@@ -149,27 +148,27 @@ const Index = () => {
                           <Icon name="Award" size={32} className="text-primary" />
                         </div>
                         <div>
-                          <p className="text-sm font-bold text-slate-700">#1</p>
-                          <p className="text-xs text-slate-500">OFFICIAL</p>
-                          <p className="text-xs text-slate-500">DISTRIBUTOR</p>
+                          <p className="text-lg font-bold" style={{ color: '#d4a5a5' }}>#1</p>
+                          <p className="text-lg" style={{ color: '#d4a5a5' }}>official</p>
+                          <p className="text-lg" style={{ color: '#d4a5a5' }}>distributor</p>
                         </div>
                       </div>
                     </div>
                     <div className="text-center">
-                      <p className="text-sm text-slate-500">Certificate № 027</p>
+                      <p className="text-lg" style={{ color: '#d4a5a5' }}>certificate № 027</p>
                     </div>
                   </div>
 
                   <div className="flex flex-col items-center">
                     <div className="mb-4">
-                      <p className="text-base text-slate-700 mb-2">Director</p>
-                      <p className="text-sm text-slate-600 mb-4">Acntruck Vehicle & Machinery</p>
-                      <div className="text-5xl text-primary leading-none mb-2">
+                      <p className="text-lg mb-2" style={{ color: '#d4a5a5' }}>director</p>
+                      <p className="text-lg mb-4" style={{ color: '#d4a5a5' }}>acntruck vehicle & machinery</p>
+                      <div className="text-5xl leading-none mb-2" style={{ color: '#d4a5a5' }}>
                         <p style={{ writingMode: 'vertical-rl', fontFamily: 'Roboto, sans-serif', letterSpacing: '0.1em' }}>李明华</p>
                       </div>
                     </div>
                     <div className="border-t-2 border-slate-400 w-48 pt-2">
-                      <p className="text-sm text-slate-600 text-right">Signature</p>
+                      <p className="text-lg text-right" style={{ color: '#d4a5a5' }}>signature</p>
                     </div>
                   </div>
                 </div>
