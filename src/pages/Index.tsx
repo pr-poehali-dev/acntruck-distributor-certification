@@ -15,10 +15,18 @@ const Index = () => {
           pixelRatio: 3,
           backgroundColor: '#ffffff',
         });
+        
+        const response = await fetch(dataUrl);
+        const blob = await response.blob();
+        const jpegBlob = new Blob([blob], { type: 'image/jpeg' });
+        const url = URL.createObjectURL(jpegBlob);
+        
         const link = document.createElement('a');
         link.download = 'distributor-certificate.jpeg';
-        link.href = dataUrl;
+        link.href = url;
         link.click();
+        
+        URL.revokeObjectURL(url);
       } catch (error) {
         console.error('Failed to generate certificate:', error);
       }
@@ -130,7 +138,7 @@ const Index = () => {
                       />
                     </div>
                     <div className="text-left">
-                      <p className="text-base text-slate-600 mb-1">Date __________</p>
+                      <p className="text-base text-slate-600 mb-1">Date 14.03.2022</p>
                     </div>
                   </div>
 
