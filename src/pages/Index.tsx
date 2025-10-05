@@ -131,57 +131,126 @@ const Index = () => {
             <Card className="p-0 shadow-2xl bg-white overflow-hidden">
               <div
                 ref={certificateRef}
-                className="w-[800px] h-[580px] relative"
+                className="w-[1000px] h-[720px] relative"
                 style={{
-                  backgroundImage: 'url(https://cdn.poehali.dev/files/fc12112b-65b4-4648-8c91-e33aa410b54d.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  fontFamily: 'Cambria, serif'
+                  fontFamily: 'Cambria, serif',
+                  background: 'linear-gradient(135deg, #D4AF37 0%, #F4E5B8 25%, #D4AF37 50%, #F4E5B8 75%, #D4AF37 100%)'
                 }}
               >
-                <div className="absolute inset-0 flex flex-col justify-between p-12 pt-16">
-                  <div className="text-center">
+                <svg className="absolute inset-0 w-full h-full opacity-10" style={{ mixBlendMode: 'overlay' }}>
+                  <defs>
+                    <pattern id="fish-scale" x="0" y="0" width="60" height="40" patternUnits="userSpaceOnUse">
+                      <circle cx="30" cy="40" r="30" fill="#C9A961" opacity="0.3"/>
+                      <circle cx="60" cy="40" r="30" fill="#C9A961" opacity="0.3"/>
+                      <circle cx="0" cy="40" r="30" fill="#C9A961" opacity="0.3"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#fish-scale)"/>
+                </svg>
+
+                <div 
+                  className="absolute inset-0 m-8"
+                  style={{
+                    border: '20px solid',
+                    borderImage: 'linear-gradient(45deg, #B8860B, #FFD700, #B8860B) 1',
+                    boxShadow: 'inset 0 0 30px rgba(212,175,55,0.3)'
+                  }}
+                >
+                  <div className="absolute inset-0 m-4" style={{ border: '3px solid #8B6914' }}>
+                    <svg className="absolute top-0 left-0 w-32 h-32" viewBox="0 0 100 100">
+                      <path d="M50,10 Q60,20 50,30 Q40,20 50,10" fill="#B8860B"/>
+                      <circle cx="50" cy="25" r="8" fill="#FFD700"/>
+                      <path d="M30,50 Q40,40 50,50 Q40,60 30,50" fill="#B8860B"/>
+                    </svg>
+                    
+                    <svg className="absolute top-0 right-0 w-32 h-32" viewBox="0 0 100 100">
+                      <path d="M50,10 Q60,20 50,30 Q40,20 50,10" fill="#B8860B" transform="rotate(90 50 50)"/>
+                      <circle cx="50" cy="25" r="8" fill="#FFD700" transform="rotate(90 50 50)"/>
+                      <path d="M30,50 Q40,40 50,50 Q40,60 30,50" fill="#B8860B" transform="rotate(90 50 50)"/>
+                    </svg>
+
+                    <svg className="absolute bottom-0 left-0 w-32 h-32" viewBox="0 0 100 100">
+                      <path d="M50,10 Q60,20 50,30 Q40,20 50,10" fill="#B8860B" transform="rotate(270 50 50)"/>
+                      <circle cx="50" cy="25" r="8" fill="#FFD700" transform="rotate(270 50 50)"/>
+                      <path d="M30,50 Q40,40 50,50 Q40,60 30,50" fill="#B8860B" transform="rotate(270 50 50)"/>
+                    </svg>
+
+                    <svg className="absolute bottom-0 right-0 w-32 h-32" viewBox="0 0 100 100">
+                      <path d="M50,10 Q60,20 50,30 Q40,20 50,10" fill="#B8860B" transform="rotate(180 50 50)"/>
+                      <circle cx="50" cy="25" r="8" fill="#FFD700" transform="rotate(180 50 50)"/>
+                      <path d="M30,50 Q40,40 50,50 Q40,60 30,50" fill="#B8860B" transform="rotate(180 50 50)"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="relative z-10 h-full flex flex-col justify-between p-20 pt-24">
+                  <div className="text-center bg-white/90 rounded-lg p-12 shadow-lg">
+                    <h2 className="text-6xl font-bold mb-8 tracking-wide"
+                      style={{ color: '#8B0000' }}
+                    >
+                      CERTIFICATE
+                    </h2>
+                    
                     {text1 && (
-                      <p className="text-sm leading-relaxed mb-6 px-8"
+                      <p className="text-base leading-relaxed mb-8 px-6"
                         style={{ color: '#2C1810', textAlign: 'justify' }}
                       >
                         {text1}
                       </p>
                     )}
 
-                    {companyName && (
-                      <p className="text-base font-semibold mb-2" style={{ color: '#2C1810' }}>
-                        {companyName}
-                      </p>
-                    )}
-                    
-                    {date1 && (
-                      <p className="text-base mb-6" style={{ color: '#2C1810' }}>
-                        {date1}
-                      </p>
-                    )}
+                    <div className="flex justify-center items-center gap-6 mb-8">
+                      {companyName && (
+                        <div className="text-center">
+                          <p className="text-lg font-semibold mb-2" style={{ color: '#2C1810' }}>
+                            {companyName}
+                          </p>
+                          {date1 && (
+                            <p className="text-base" style={{ color: '#2C1810' }}>
+                              {date1}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                      
+                      <img 
+                        src="https://cdn.poehali.dev/files/7321543c-55e5-4ca1-be2c-dcc77fa47b51.png" 
+                        alt="Seal" 
+                        className="w-32 h-32 object-contain"
+                      />
+                    </div>
+
+                    <h3 className="text-5xl font-bold mb-6" style={{ color: '#000' }}>
+                      证 书
+                    </h3>
 
                     {text2 && (
-                      <p className="text-sm leading-relaxed mb-6 px-8"
+                      <p className="text-base leading-relaxed mb-6 px-6"
                         style={{ color: '#2C1810', textAlign: 'justify' }}
                       >
                         {text2}
                       </p>
                     )}
-                  </div>
 
-                  <div className="flex justify-end">
-                    <div className="text-right">
-                      {companyName2 && (
-                        <p className="text-base font-semibold mb-1" style={{ color: '#2C1810' }}>
-                          {companyName2}
-                        </p>
-                      )}
-                      {date2 && (
-                        <p className="text-base" style={{ color: '#2C1810' }}>
-                          {date2}
-                        </p>
-                      )}
+                    <div className="flex justify-end items-center gap-6 mt-8">
+                      <div className="text-right">
+                        {companyName2 && (
+                          <p className="text-lg font-semibold mb-2" style={{ color: '#2C1810' }}>
+                            {companyName2}
+                          </p>
+                        )}
+                        {date2 && (
+                          <p className="text-base" style={{ color: '#2C1810' }}>
+                            {date2}
+                          </p>
+                        )}
+                      </div>
+                      
+                      <img 
+                        src="https://cdn.poehali.dev/files/7321543c-55e5-4ca1-be2c-dcc77fa47b51.png" 
+                        alt="Seal" 
+                        className="w-32 h-32 object-contain"
+                      />
                     </div>
                   </div>
                 </div>
