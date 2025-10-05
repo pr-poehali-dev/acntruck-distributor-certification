@@ -53,7 +53,7 @@ const Index = () => {
             <div
               ref={certificateRef}
               className="w-[1400px] h-[1000px] relative bg-white"
-              style={{ fontFamily: 'Roboto, sans-serif' }}
+              style={{ fontFamily: 'Cambria, serif' }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-50"></div>
               
@@ -112,7 +112,7 @@ const Index = () => {
                   <div className="mb-8">
                     <div className="inline-block border-b-2 border-slate-400 pb-2 px-12">
                       <p className="text-lg" 
-                        style={{ fontFamily: 'Roboto, sans-serif', color: '#d4a5a5' }}
+                        style={{ fontFamily: 'Cambria, serif', color: '#d4a5a5' }}
                       >
                         techglobal llc
                       </p>
@@ -164,7 +164,7 @@ const Index = () => {
                       <p className="text-lg mb-2" style={{ color: '#d4a5a5' }}>director</p>
                       <p className="text-lg mb-4" style={{ color: '#d4a5a5' }}>acntruck vehicle & machinery</p>
                       <div className="text-5xl leading-none mb-2" style={{ color: '#d4a5a5' }}>
-                        <p style={{ writingMode: 'vertical-rl', fontFamily: 'Roboto, sans-serif', letterSpacing: '0.1em' }}>李明华</p>
+                        <p style={{ writingMode: 'vertical-rl', fontFamily: 'Cambria, serif', letterSpacing: '0.1em' }}>李明华</p>
                       </div>
                     </div>
                     <div className="border-t-2 border-slate-400 w-48 pt-2">
