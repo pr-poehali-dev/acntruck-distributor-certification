@@ -44,8 +44,8 @@ const Index = () => {
           <Card className="p-0 shadow-2xl bg-white overflow-hidden">
             <div
               ref={certificateRef}
-              className="w-[1200px] h-[900px] bg-white p-16 relative"
-              style={{ fontFamily: 'Roboto, sans-serif' }}
+              className="w-[1200px] h-[900px] p-16 relative"
+              style={{ fontFamily: 'Roboto, sans-serif', background: 'linear-gradient(135deg, #fff5f7 0%, #ffe8ec 50%, #fff5f7 100%)' }}
             >
               <div className="absolute inset-0 border-[20px] border-double border-primary m-8"></div>
               
@@ -68,7 +68,7 @@ const Index = () => {
                   </div>
                   <h2
                     className="text-6xl font-bold mb-4 tracking-wide text-slate-800"
-                    style={{ fontFamily: 'Cormorant, serif' }}
+                    style={{ fontFamily: 'Roboto, sans-serif' }}
                   >
                     DISTRIBUTOR CERTIFICATE
                   </h2>
@@ -80,10 +80,10 @@ const Index = () => {
                     This is to certify that
                   </p>
 
-                  <div className="py-6 px-8 bg-slate-50 border-l-4 border-primary rounded-r-lg">
+                  <div className="py-6 px-8 bg-white/60 border-l-4 border-primary rounded-r-lg">
                     <h3
                       className="text-4xl font-bold text-primary mb-2"
-                      style={{ fontFamily: 'Cormorant, serif' }}
+                      style={{ fontFamily: 'Roboto, sans-serif' }}
                     >
                       Acntruck Vehicle & Machinery
                     </h3>
@@ -94,12 +94,12 @@ const Index = () => {
                     hereby authorizes
                   </p>
 
-                  <div className="py-6 px-8 bg-destructive/5 border-l-4 border-destructive rounded-r-lg">
+                  <div className="py-6 px-8 bg-white/60 border-l-4 border-destructive rounded-r-lg">
                     <h3
                       className="text-4xl font-bold text-destructive mb-2"
-                      style={{ fontFamily: 'Cormorant, serif' }}
+                      style={{ fontFamily: 'Roboto, sans-serif' }}
                     >
-                      TechGlobal
+                      TechGlobal LLC
                     </h3>
                     <p className="text-2xl text-slate-600">Yuzhno-Sakhalinsk</p>
                   </div>
@@ -116,10 +116,12 @@ const Index = () => {
 
                 <div className="mt-12 flex justify-between items-end w-full max-w-3xl px-8">
                   <div className="text-center">
-                    <div className="w-48 h-24 flex items-center justify-center mb-2">
-                      <div className="w-20 h-20 border-4 border-primary rounded-full flex items-center justify-center bg-primary/5">
-                        <Icon name="Stamp" size={32} className="text-primary" />
-                      </div>
+                    <div className="w-48 h-48 flex items-center justify-center mb-2">
+                      <img 
+                        src="https://cdn.poehali.dev/files/70296751-86bd-4e62-94e2-5331886bdb8a.png" 
+                        alt="Official Seal" 
+                        className="w-40 h-40 object-contain"
+                      />
                     </div>
                     <div className="border-t-2 border-slate-300 pt-2">
                       <p className="text-sm font-semibold text-slate-600">Official Seal</p>
@@ -128,13 +130,10 @@ const Index = () => {
                   </div>
 
                   <div className="text-center">
-                    <div className="w-48 h-24 flex items-center justify-center mb-2">
-                      <p
-                        className="text-4xl text-primary"
-                        style={{ fontFamily: 'Cormorant, serif', fontStyle: 'italic' }}
-                      >
-                        Authorized
-                      </p>
+                    <div className="w-48 h-48 flex items-center justify-center mb-2">
+                      <div className="text-6xl text-primary leading-none">
+                        <p style={{ writingMode: 'vertical-rl', fontFamily: 'Roboto, sans-serif', letterSpacing: '0.1em' }}>李明华</p>
+                      </div>
                     </div>
                     <div className="border-t-2 border-slate-300 pt-2">
                       <p className="text-sm font-semibold text-slate-600">Signature</p>
