@@ -27,7 +27,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-primary mb-2">Distributor Certificate</h1>
           <p className="text-slate-600">Official Authorization Document</p>
@@ -44,116 +44,127 @@ const Index = () => {
           <Card className="p-0 shadow-2xl bg-white overflow-hidden">
             <div
               ref={certificateRef}
-              className="w-[1200px] h-[900px] p-16 relative"
-              style={{ fontFamily: 'Roboto, sans-serif', background: 'linear-gradient(135deg, #fff5f7 0%, #ffe8ec 50%, #fff5f7 100%)' }}
+              className="w-[1400px] h-[1000px] relative bg-white"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
             >
-              <div className="absolute inset-0 border-[20px] border-double border-primary m-8"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-50"></div>
               
-              <div className="absolute top-12 left-12 w-24 h-24 bg-primary/5 rounded-full flex items-center justify-center">
-                <div className="text-primary">
-                  <Icon name="Award" size={48} />
-                </div>
-              </div>
-              
-              <div className="absolute top-12 right-12 w-24 h-24 bg-destructive/5 rounded-full flex items-center justify-center">
-                <div className="text-destructive">
-                  <Icon name="Building2" size={48} />
-                </div>
+              <div className="absolute inset-0 border-[30px] border-double m-6"
+                style={{ 
+                  borderColor: '#4A90A4',
+                  borderImageSource: 'repeating-linear-gradient(45deg, #4A90A4 0, #4A90A4 10px, #6BA8BA 10px, #6BA8BA 20px)',
+                  borderImageSlice: 1
+                }}
+              ></div>
+
+              <div className="absolute inset-0 border-[8px] border-solid m-16"
+                style={{ borderColor: '#2B6B7F' }}
+              ></div>
+
+              <svg className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 z-20">
+                <circle cx="64" cy="64" r="60" fill="#4A90A4" />
+                <circle cx="64" cy="64" r="48" fill="#2B6B7F" />
+              </svg>
+
+              <div className="absolute top-8 left-8 w-64 h-full opacity-20">
+                <svg viewBox="0 0 100 800" className="w-full h-full">
+                  <path d="M 20,0 Q 60,100 20,200 Q 60,300 20,400 Q 60,500 20,600 Q 60,700 20,800" 
+                    fill="none" stroke="#4A90A4" strokeWidth="2"/>
+                  <path d="M 40,0 Q 80,100 40,200 Q 80,300 40,400 Q 80,500 40,600 Q 80,700 40,800" 
+                    fill="none" stroke="#6BA8BA" strokeWidth="1.5"/>
+                </svg>
               </div>
 
-              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                <div className="mb-8">
-                  <div className="inline-block bg-primary/10 px-6 py-3 rounded-full mb-6">
-                    <Icon name="Award" size={40} className="text-primary mx-auto" />
-                  </div>
-                  <h2
-                    className="text-6xl font-bold mb-4 tracking-wide text-slate-800"
-                    style={{ fontFamily: 'Roboto, sans-serif' }}
+              <div className="absolute top-8 right-8 w-64 h-full opacity-20">
+                <svg viewBox="0 0 100 800" className="w-full h-full">
+                  <path d="M 80,0 Q 40,100 80,200 Q 40,300 80,400 Q 40,500 80,600 Q 40,700 80,800" 
+                    fill="none" stroke="#4A90A4" strokeWidth="2"/>
+                  <path d="M 60,0 Q 20,100 60,200 Q 20,300 60,400 Q 20,500 60,600 Q 20,700 60,800" 
+                    fill="none" stroke="#6BA8BA" strokeWidth="1.5"/>
+                </svg>
+              </div>
+
+              <div className="relative z-10 h-full flex flex-col justify-between p-24 pt-32">
+                <div className="text-center">
+                  <p className="text-lg text-slate-700 mb-6">
+                    Acntruck Vehicle & Machinery (Shanghai) Co., Ltd
+                  </p>
+                  
+                  <h2 className="text-7xl font-bold mb-4 tracking-wide"
+                    style={{ color: '#2B6B7F' }}
                   >
-                    DISTRIBUTOR CERTIFICATE
+                    CERTIFICATE
                   </h2>
-                  <div className="w-48 h-1 bg-gradient-to-r from-primary via-destructive to-primary mx-auto"></div>
-                </div>
+                  <p className="text-3xl italic text-slate-600 mb-12">Official Representative</p>
 
-                <div className="max-w-3xl space-y-8 text-slate-700">
-                  <p className="text-xl leading-relaxed" style={{ fontFamily: 'Roboto, sans-serif' }}>
-                    This is to certify that
+                  <p className="text-xl text-slate-700 mb-8 leading-relaxed">
+                    This certificate confirms that the company
                   </p>
 
-                  <div className="py-6 px-8 bg-white/60 border-l-4 border-primary rounded-r-lg">
-                    <h3
-                      className="text-4xl font-bold text-primary mb-2"
-                      style={{ fontFamily: 'Roboto, sans-serif' }}
-                    >
-                      Acntruck Vehicle & Machinery
-                    </h3>
-                    <p className="text-2xl text-slate-600">(Shanghai) Co., Ltd</p>
+                  <div className="mb-8">
+                    <div className="inline-block border-b-2 border-slate-400 pb-2 px-12">
+                      <p className="text-4xl font-bold text-slate-800" 
+                        style={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic' }}
+                      >
+                        TechGlobal LLC
+                      </p>
+                    </div>
                   </div>
 
-                  <p className="text-xl leading-relaxed px-4">
-                    hereby authorizes
+                  <p className="text-xl text-slate-700 mb-4 max-w-4xl mx-auto leading-relaxed">
+                    has the status of an official representative of{' '}
+                    <span className="font-semibold">Acntruck Vehicle & Machinery (Shanghai) Co., Ltd</span>
                   </p>
-
-                  <div className="py-6 px-8 bg-white/60 border-l-4 border-destructive rounded-r-lg">
-                    <h3
-                      className="text-4xl font-bold text-destructive mb-2"
-                      style={{ fontFamily: 'Roboto, sans-serif' }}
-                    >
-                      TechGlobal LLC
-                    </h3>
-                    <p className="text-2xl text-slate-600">Yuzhno-Sakhalinsk</p>
-                  </div>
-
-                  <p className="text-xl leading-relaxed px-4">
-                    to act as an official distributor of products manufactured by{' '}
-                    <span className="font-semibold text-primary">
-                      Acntruck Vehicle & Machinery (Shanghai) Co., Ltd
-                    </span>{' '}
-                    throughout the territory of the{' '}
-                    <span className="font-semibold text-slate-800">Russian Federation</span>.
+                  <p className="text-lg text-slate-600">
+                    (Acntruck Vehicle & Machinery (Shanghai) Co., Ltd)
                   </p>
                 </div>
 
-                <div className="mt-12 flex justify-between items-end w-full max-w-3xl px-8">
-                  <div className="text-center">
-                    <div className="w-48 h-48 flex items-center justify-center mb-2">
+                <div className="flex justify-between items-end">
+                  <div className="flex flex-col items-center">
+                    <div className="w-48 h-48 flex items-center justify-center mb-4">
                       <img 
                         src="https://cdn.poehali.dev/files/70296751-86bd-4e62-94e2-5331886bdb8a.png" 
                         alt="Official Seal" 
-                        className="w-40 h-40 object-contain"
+                        className="w-44 h-44 object-contain"
                       />
                     </div>
-                    <div className="border-t-2 border-slate-300 pt-2">
-                      <p className="text-sm font-semibold text-slate-600">Official Seal</p>
-                      <p className="text-xs text-slate-500">Shanghai, China</p>
+                    <div className="text-left">
+                      <p className="text-base text-slate-600 mb-1">Date __________</p>
                     </div>
                   </div>
 
-                  <div className="text-center">
-                    <div className="w-48 h-48 flex items-center justify-center mb-2">
-                      <div className="text-6xl text-primary leading-none">
+                  <div className="flex flex-col items-center">
+                    <div className="bg-white/60 rounded-lg p-6 mb-4 border-2 border-slate-200">
+                      <div className="flex items-center gap-4 mb-2">
+                        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Icon name="Award" size={32} className="text-primary" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-bold text-slate-700">#1</p>
+                          <p className="text-xs text-slate-500">OFFICIAL</p>
+                          <p className="text-xs text-slate-500">DISTRIBUTOR</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm text-slate-500">Certificate № 027</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div className="mb-4">
+                      <p className="text-base text-slate-700 mb-2">Director</p>
+                      <p className="text-sm text-slate-600 mb-4">Acntruck Vehicle & Machinery</p>
+                      <div className="text-5xl text-primary leading-none mb-2">
                         <p style={{ writingMode: 'vertical-rl', fontFamily: 'Roboto, sans-serif', letterSpacing: '0.1em' }}>李明华</p>
                       </div>
                     </div>
-                    <div className="border-t-2 border-slate-300 pt-2">
-                      <p className="text-sm font-semibold text-slate-600">Signature</p>
-                      <p className="text-xs text-slate-500">Director</p>
+                    <div className="border-t-2 border-slate-400 w-48 pt-2">
+                      <p className="text-sm text-slate-600 text-right">Signature</p>
                     </div>
                   </div>
                 </div>
-
-                <div className="mt-8 flex items-center gap-2 text-sm text-slate-500">
-                  <Icon name="Calendar" size={16} />
-                  <p>Issued: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                </div>
-              </div>
-
-              <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-12 opacity-30">
-                <Icon name="Award" size={24} className="text-primary" />
-                <Icon name="Shield" size={24} className="text-primary" />
-                <Icon name="CheckCircle2" size={24} className="text-primary" />
-                <Icon name="Building2" size={24} className="text-destructive" />
-                <Icon name="Globe" size={24} className="text-destructive" />
               </div>
             </div>
           </Card>
