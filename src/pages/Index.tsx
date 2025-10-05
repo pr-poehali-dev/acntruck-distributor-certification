@@ -7,13 +7,13 @@ import { toPng } from 'html-to-image';
 const Index = () => {
   const certificateRef = useRef<HTMLDivElement>(null);
   
-  const [text1, setText1] = useState('The certificate certifies that «Agroresurs» Company (Chelyabinsk, Russia) is the official dealer on the premises of Russian Federation with the authorized rights for sale and maintenance service of retail equipment and food machinery of «Harbin Golden Happiness Commercial Machinery Co., Ltd.» Harbin, China under the contract 1 dated as of 09.06.2008 between «Giness Co., Ltd.» and «Harbin Golden Happiness Commercial Machinery Co., Ltd.». The certificate is issued on 01.01.2009');
-  const [companyName, setCompanyName] = useState('Harbin Golden Happiness Commercial Machinery Co., Ltd');
-  const [date1, setDate1] = useState('Jan 1, 2009');
+  const [text1, setText1] = useState('');
+  const [companyName, setCompanyName] = useState('');
+  const [date1, setDate1] = useState('');
   
-  const [text2, setText2] = useState('本证书兹授权俄罗斯车里亚宾斯克 Agroresurs 公司为中国哈尔滨金美乐商业机械有限公司在俄罗斯联邦境内的官方销售服务商。授权该公司在双方于2008年6月9日签订的第一号合同框架下，在俄罗斯联邦境内销售和维修我公司所生产的系列产品。本证书生效日期：2009年1月1日。');
-  const [companyName2, setCompanyName2] = useState('哈尔滨金美乐商业机械有限公司');
-  const [date2, setDate2] = useState('2009年1月1日');
+  const [text2, setText2] = useState('');
+  const [companyName2, setCompanyName2] = useState('');
+  const [date2, setDate2] = useState('');
 
   const downloadCertificate = async () => {
     if (certificateRef.current) {
