@@ -141,46 +141,47 @@ const Index = () => {
               >
                 <div className="absolute inset-0 flex flex-col justify-between p-12 pt-16">
                   <div className="text-center">
-                    <h2 className="text-5xl font-bold mb-6 tracking-wide"
-                      style={{ color: '#8B0000' }}
-                    >
-                      CERTIFICATE
-                    </h2>
-                    
-                    <p className="text-sm leading-relaxed mb-6 px-8"
-                      style={{ color: '#2C1810', textAlign: 'justify' }}
-                    >
-                      {text1}
-                    </p>
+                    {text1 && (
+                      <p className="text-sm leading-relaxed mb-6 px-8"
+                        style={{ color: '#2C1810', textAlign: 'justify' }}
+                      >
+                        {text1}
+                      </p>
+                    )}
 
-                    <div className="mb-6">
-                      <p className="text-base font-semibold" style={{ color: '#2C1810' }}>
+                    {companyName && (
+                      <p className="text-base font-semibold mb-2" style={{ color: '#2C1810' }}>
                         {companyName}
                       </p>
-                      <p className="text-base" style={{ color: '#2C1810' }}>
+                    )}
+                    
+                    {date1 && (
+                      <p className="text-base mb-6" style={{ color: '#2C1810' }}>
                         {date1}
                       </p>
-                    </div>
+                    )}
 
-                    <h3 className="text-4xl font-bold mb-4" style={{ color: '#000' }}>
-                      证 书
-                    </h3>
-
-                    <p className="text-sm leading-relaxed mb-6 px-8"
-                      style={{ color: '#2C1810', textAlign: 'justify' }}
-                    >
-                      {text2}
-                    </p>
+                    {text2 && (
+                      <p className="text-sm leading-relaxed mb-6 px-8"
+                        style={{ color: '#2C1810', textAlign: 'justify' }}
+                      >
+                        {text2}
+                      </p>
+                    )}
                   </div>
 
                   <div className="flex justify-end">
                     <div className="text-right">
-                      <p className="text-base font-semibold mb-1" style={{ color: '#2C1810' }}>
-                        {companyName2}
-                      </p>
-                      <p className="text-base" style={{ color: '#2C1810' }}>
-                        {date2}
-                      </p>
+                      {companyName2 && (
+                        <p className="text-base font-semibold mb-1" style={{ color: '#2C1810' }}>
+                          {companyName2}
+                        </p>
+                      )}
+                      {date2 && (
+                        <p className="text-base" style={{ color: '#2C1810' }}>
+                          {date2}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
