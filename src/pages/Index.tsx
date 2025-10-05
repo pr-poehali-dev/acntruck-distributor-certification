@@ -22,6 +22,7 @@ const Index = () => {
           quality: 1,
           pixelRatio: 3,
           backgroundColor: '#ffffff',
+          skipFonts: true,
         });
         
         const response = await fetch(dataUrl);
@@ -37,6 +38,7 @@ const Index = () => {
         URL.revokeObjectURL(url);
       } catch (error) {
         console.error('Failed to generate certificate:', error);
+        alert('Error downloading certificate. Please try again.');
       }
     }
   };
@@ -217,6 +219,7 @@ const Index = () => {
                         src="https://cdn.poehali.dev/files/7321543c-55e5-4ca1-be2c-dcc77fa47b51.png" 
                         alt="Seal" 
                         className="w-32 h-32 object-contain"
+                        crossOrigin="anonymous"
                       />
                     </div>
 
@@ -250,6 +253,7 @@ const Index = () => {
                         src="https://cdn.poehali.dev/files/7321543c-55e5-4ca1-be2c-dcc77fa47b51.png" 
                         alt="Seal" 
                         className="w-32 h-32 object-contain"
+                        crossOrigin="anonymous"
                       />
                     </div>
                   </div>
