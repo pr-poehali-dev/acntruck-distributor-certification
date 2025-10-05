@@ -228,66 +228,70 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="relative z-10 h-full flex flex-col justify-between p-20 pt-24">
-                  <div className="text-center bg-white/90 rounded-lg p-12 shadow-lg">
-                    <h2 className="text-6xl font-bold mb-8 tracking-wide"
+                <div className="relative z-10 h-full flex flex-col justify-between p-12 pt-16">
+                  <div className="text-center bg-white/90 rounded-lg p-8 shadow-lg">
+                    <h2 className="text-5xl font-bold mb-6 tracking-wide"
                       style={{ color: '#8B0000' }}
                     >
                       CERTIFICATE
                     </h2>
                     
                     {text1 && (
-                      <p className="text-base leading-relaxed mb-8 px-6"
+                      <p className="text-sm leading-relaxed mb-6 px-4"
                         style={{ color: '#2C1810', textAlign: 'justify' }}
                       >
                         {text1}
                       </p>
                     )}
 
-                    <div className="flex justify-center items-center gap-6 mb-8">
+                    <div className="flex justify-center items-center gap-4 mb-6">
                       {companyName && (
-                        <div className="text-center">
-                          <p className="text-lg font-semibold mb-2" style={{ color: '#2C1810' }}>
+                        <div className="text-center flex-1">
+                          <p className="text-base font-semibold mb-1" style={{ color: '#2C1810' }}>
                             {companyName}
                           </p>
                           {date1 && (
-                            <p className="text-base" style={{ color: '#2C1810' }}>
+                            <p className="text-sm" style={{ color: '#2C1810' }}>
                               {date1}
                             </p>
                           )}
                         </div>
                       )}
                       
-                      <Seal />
+                      <div className="flex-shrink-0">
+                        <Seal />
+                      </div>
                     </div>
 
-                    <h3 className="text-5xl font-bold mb-6" style={{ color: '#000' }}>
+                    <h3 className="text-4xl font-bold mb-4" style={{ color: '#000' }}>
                       证 书
                     </h3>
 
                     {text2 && (
-                      <p className="text-base leading-relaxed mb-6 px-6"
+                      <p className="text-sm leading-relaxed mb-4 px-4"
                         style={{ color: '#2C1810', textAlign: 'justify' }}
                       >
                         {text2}
                       </p>
                     )}
 
-                    <div className="flex justify-end items-center gap-6 mt-8">
-                      <div className="text-right">
+                    <div className="flex justify-end items-center gap-4 mt-6">
+                      <div className="text-right flex-1">
                         {companyName2 && (
-                          <p className="text-lg font-semibold mb-2" style={{ color: '#2C1810' }}>
+                          <p className="text-base font-semibold mb-1" style={{ color: '#2C1810' }}>
                             {companyName2}
                           </p>
                         )}
                         {date2 && (
-                          <p className="text-base" style={{ color: '#2C1810' }}>
+                          <p className="text-sm" style={{ color: '#2C1810' }}>
                             {date2}
                           </p>
                         )}
                       </div>
                       
-                      <Seal />
+                      <div className="flex-shrink-0">
+                        <Seal />
+                      </div>
                     </div>
                   </div>
                 </div>
