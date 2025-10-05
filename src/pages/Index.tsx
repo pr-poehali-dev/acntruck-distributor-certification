@@ -7,13 +7,13 @@ import { toPng } from 'html-to-image';
 const Index = () => {
   const certificateRef = useRef<HTMLDivElement>(null);
   
-  const [text1, setText1] = useState('');
-  const [companyName, setCompanyName] = useState('');
-  const [date1, setDate1] = useState('');
+  const [text1, setText1] = useState('The certificate confirms that TechGlobal (Yuzhno-Sakhalinsk, Russia) is the official distributor in the Russian Federation with the rights to sell and service products manufactured by AcnTruck Vehicle & Machinery (Shanghai) Co., Ltd. in accordance with Contract No. 126 dated 18.10.2022 between AcnTruck Vehicle & Machinery (Shanghai) Co., Ltd. and TechGlobal LLC. The certificate was issued on 19.10.2022.');
+  const [companyName, setCompanyName] = useState('AcnTruck Vehicle & Machinery (Shanghai) Co., Ltd.');
+  const [date1, setDate1] = useState('October 19, 2022');
   
-  const [text2, setText2] = useState('');
-  const [companyName2, setCompanyName2] = useState('');
-  const [date2, setDate2] = useState('');
+  const [text2, setText2] = useState('本证书确认TechGlobal公司（俄罗斯联邦南萨哈林斯克）是俄罗斯联邦境内销售和服务由中国上海安川机械有限公司制造产品的官方经销商。根据2022年10月18日签订的第126号合同，安川机械（上海）有限公司与TechGlobal有限责任公司之间达成协议。本证书签发日期为2022年10月19日。');
+  const [companyName2, setCompanyName2] = useState('安川机械（上海）有限公司');
+  const [date2, setDate2] = useState('2022年10月19日');
 
   const downloadCertificate = async () => {
     if (certificateRef.current) {
